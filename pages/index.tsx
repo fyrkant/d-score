@@ -2,6 +2,7 @@ import Link from 'next/link'
 import * as React from 'react'
 
 import { differenceInCalendarDays } from 'date-fns'
+import { Fragment } from 'react'
 
 interface Score {
   nick: string
@@ -102,9 +103,10 @@ export default class Index extends React.Component {
   }
   public render() {
     return (
+      <Fragment>
+      <TV />
       <div className="outer">
         <div>
-        <TV />
           <ol ref={ol => this.ol = ol}>
             {
               data
@@ -115,6 +117,11 @@ export default class Index extends React.Component {
           </ol>
         </div>
         <style jsx>{`
+          body, html {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+          }
           body {
             background-color: black;
           }
@@ -122,8 +129,8 @@ export default class Index extends React.Component {
             position: absolute;
             left: 0;
             top: 0;
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             z-index: -1;
           }
           div.outer {
@@ -148,6 +155,7 @@ export default class Index extends React.Component {
           }
         `}</style>
       </div>
+      </Fragment>
     )
   }
 }
