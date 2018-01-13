@@ -1,0 +1,36 @@
+body, html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: black;
+}
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+div.outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+ol {
+  flex: 1;
+  opacity: 0;
+}
+ol.active {
+  opacity: .8;
+  transition: 0.7s ease-in;
+}
+li {
+  opacity: .8;
+  font-size: 10vw;
+  font-family: VT323;
+  color: white;
+}

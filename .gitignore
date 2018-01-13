@@ -1,7 +1,8 @@
 *.js
 node_modules
-.next/
 # Build directory
 public/
 .DS_Store
 yarn-error.log
+.cache
+dist
